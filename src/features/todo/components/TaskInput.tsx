@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Input, Button } from "@/components/ui";
 import { Plus } from "lucide-react";
-import { Priority } from "../utils/priorityUtils";
+import { Priority } from "@/features/todo/utils/priorityUtils";
 import { TaskPrioritySelector } from "./TaskPrioritySelector";
 
 export interface TaskInputProps {

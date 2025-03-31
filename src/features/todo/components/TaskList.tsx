@@ -1,9 +1,9 @@
-import { Task } from "../types/task";
+import { Task } from "@/features/todo/types/task";
 import { AnimatePresence, motion } from "framer-motion";
 import { TaskItem } from "./TaskItem";
 import { TaskStats } from "./TaskStats";
 import { TaskEmptyState } from "./TaskEmptyState";
-import { Priority } from "../utils/priorityUtils";
+import { Priority } from "@/features/todo/utils/priorityUtils";
 
 export interface TaskListProps {
   tasks: Task[];

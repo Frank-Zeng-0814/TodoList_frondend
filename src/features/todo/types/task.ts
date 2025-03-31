@@ -1,4 +1,4 @@
-import { Priority } from "../utils/priorityUtils";
+import { Priority } from "@/features/todo/utils/priorityUtils";
 
 export interface Task {
   id: string;

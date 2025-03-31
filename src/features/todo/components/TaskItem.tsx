@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Trash2, Pencil, Save, X, Clock, Flag } from "lucide-react";
 import { Input } from "@/components/ui";
 import { TaskStatusToggle } from "./TaskStatusToggle";
-import { Priority } from "../utils/priorityUtils";
+import { Priority } from "@/features/todo/utils/priorityUtils";
 import { TaskPrioritySelector } from "./TaskPrioritySelector";
 import { Badge } from "@/components/ui/custom";
 

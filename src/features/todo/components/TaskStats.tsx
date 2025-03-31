@@ -1,4 +1,4 @@
-import { Task } from "../types/task";
+import { Task } from "@/features/todo/types/task";
 import { motion } from "framer-motion";
 import { BarChart, Circle, CheckCircle } from "lucide-react";
 import { ProgressBar } from "@/components/ui/custom";

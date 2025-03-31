@@ -1,5 +1,5 @@
 import { Flag } from "lucide-react";
-import { Priority, priorityOptions } from "../utils/priorityUtils";
+import { Priority, priorityOptions } from "@/features/todo/utils/priorityUtils";
 
 interface TaskPrioritySelectorProps {
   value: Priority;
