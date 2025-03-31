@@ -6,6 +6,7 @@ export interface TodoItemProps {
   completed: boolean;
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
+  onEdit: (id: string, newText: string) => void;
 }
 
 export interface TaskInputProps {
@@ -16,4 +17,5 @@ export interface TaskListProps {
   tasks: Task[];
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
+  onEdit: (id: string, newText: string) => void;
 }

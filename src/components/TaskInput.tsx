@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TaskInputProps } from "@/types/props";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 export default function TaskInput({ onAdd }: TaskInputProps) {
   const [content, setContent] = useState("");
@@ -26,7 +27,10 @@ export default function TaskInput({ onAdd }: TaskInputProps) {
         onChange={(e) => setContent(e.target.value)}
         className="flex-grow"
       />
-      <Button type="submit">Add</Button>
+      <Button type="submit" className="gap-1">
+        <Plus className="h-4 w-4" />
+        Add
+      </Button>
     </form>
   );
 }
