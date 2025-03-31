@@ -1,4 +1,4 @@
-import { Priority } from "../components/TaskPrioritySelector";
+import { Priority } from "../utils/priorityUtils";
 
 export interface Task {
   id: string;

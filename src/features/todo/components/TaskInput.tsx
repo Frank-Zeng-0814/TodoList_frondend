@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Input, Button } from "@/components/ui";
 import { Plus } from "lucide-react";
-import { Priority, TaskPrioritySelector } from "./TaskPrioritySelector";
+import { Priority } from "../utils/priorityUtils";
+import { TaskPrioritySelector } from "./TaskPrioritySelector";
 
 export interface TaskInputProps {
   onAdd: (content: string, priority: Priority) => void;
@@ -27,7 +28,7 @@ export function TaskInput({ onAdd }: TaskInputProps) {
       <form onSubmit={handleSubmit} className="flex items-center gap-2 w-full">
         <Input
           type="text"
-          placeholder="添加新任务..."
+          placeholder="Add new task..."
           value={content}
           onChange={(e) => setContent(e.target.value)}
           className="flex-grow"
@@ -35,13 +36,13 @@ export function TaskInput({ onAdd }: TaskInputProps) {
         />
         <Button type="submit" className="gap-1">
           <Plus className="h-4 w-4" />
-          添加
+          Add
         </Button>
       </form>
 
       {showPrioritySelector && (
         <div className="mt-2 flex items-center">
-          <span className="text-xs text-gray-500 mr-2">优先级:</span>
+          <span className="text-xs text-gray-500 mr-2">Priority:</span>
           <TaskPrioritySelector value={priority} onChange={setPriority} />
         </div>
       )}

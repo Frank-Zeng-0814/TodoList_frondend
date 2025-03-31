@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { TaskItem } from "./TaskItem";
 import { TaskStats } from "./TaskStats";
 import { TaskEmptyState } from "./TaskEmptyState";
-import { Priority } from "./TaskPrioritySelector";
+import { Priority } from "../utils/priorityUtils";
 
 export interface TaskListProps {
   tasks: Task[];

@@ -3,13 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Trash2, Pencil, Save, X, Clock, Flag } from "lucide-react";
 import { Input } from "@/components/ui";
 import { TaskStatusToggle } from "./TaskStatusToggle";
-import {
-  Priority,
-  TaskPrioritySelector,
-  getPriorityBgColor,
-  getPriorityColor,
-} from "./TaskPrioritySelector";
-import { Badge } from "@/components/ui/custom/Badge";
+import { Priority } from "../utils/priorityUtils";
+import { TaskPrioritySelector } from "./TaskPrioritySelector";
+import { Badge } from "@/components/ui/custom";
 
 export interface TaskItemProps {
   id: string;
@@ -57,15 +53,15 @@ export function TaskItem({
   const priorityVariants = {
     high: {
       indicator: "bg-red-500",
-      badge: { variant: "danger" as const, label: "高" },
+      badge: { variant: "danger" as const, label: "High" },
     },
     medium: {
       indicator: "bg-yellow-500",
-      badge: { variant: "warning" as const, label: "中" },
+      badge: { variant: "warning" as const, label: "Medium" },
     },
     low: {
       indicator: "bg-blue-500",
-      badge: { variant: "primary" as const, label: "低" },
+      badge: { variant: "primary" as const, label: "Low" },
     },
   };
 
@@ -78,7 +74,7 @@ export function TaskItem({
           : "bg-white border-gray-200 hover:border-gray-300 hover:shadow"
       }`}
     >
-      {/* 优先级指示条 */}
+      {/* Priority indicator */}
       <div
         className={`absolute left-0 top-0 w-1 h-full rounded-l-lg ${priorityVariants[priority].indicator}`}
       />
@@ -109,7 +105,7 @@ export function TaskItem({
 
               {onPriorityChange && (
                 <div className="flex items-center space-x-2">
-                  <span className="text-xs text-gray-500">优先级:</span>
+                  <span className="text-xs text-gray-500">Priority:</span>
                   <TaskPrioritySelector
                     value={editPriority}
                     onChange={setEditPriority}
@@ -176,7 +172,7 @@ export function TaskItem({
                     className="text-xs text-blue-400 flex items-center mt-0.5"
                   >
                     <Clock className="h-3 w-3 mr-1 inline" />
-                    完成
+                    Completed
                   </motion.span>
                 )}
               </AnimatePresence>

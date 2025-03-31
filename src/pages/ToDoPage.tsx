@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TaskInput, TaskList } from "@/features/todo/components";
 import { Task } from "@/features/todo/types/task";
 import { v4 as uuidv4 } from "uuid";
-import { Priority } from "@/features/todo/components/TaskPrioritySelector";
+import { Priority } from "@/features/todo/utils/priorityUtils";
 
 const ToDoPage = () => {
   const [tasks, setTasks] = useState<Task[]>([]);

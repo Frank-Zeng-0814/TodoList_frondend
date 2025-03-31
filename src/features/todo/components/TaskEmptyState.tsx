@@ -35,7 +35,7 @@ export function TaskEmptyState() {
         transition={{ delay: 0.2 }}
         className="text-xl font-medium text-gray-700 mb-2"
       >
-        任务清单空空如也
+        Task List is Empty
       </motion.h3>
       <motion.p
         initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ export function TaskEmptyState() {
         transition={{ delay: 0.3 }}
         className="text-sm text-gray-500 max-w-xs mx-auto mb-6"
       >
-        点击上方"添加"按钮开始创建您的第一个任务吧！
+        Click the "Add" button above to create your first task!
       </motion.p>
 
       <motion.div
@@ -53,7 +53,7 @@ export function TaskEmptyState() {
         className="flex items-center justify-center space-x-2 text-sm text-blue-500 font-medium"
       >
         <Plus className="h-4 w-4" />
-        <span>添加新任务</span>
+        <span>Add New Task</span>
         <ArrowRight className="h-4 w-4" />
       </motion.div>
 
@@ -61,15 +61,15 @@ export function TaskEmptyState() {
         {[
           {
             icon: <ListTodo className="h-6 w-6 text-blue-400 mb-2" />,
-            text: "添加任务",
+            text: "Add Task",
           },
           {
             icon: <Circle className="h-6 w-6 text-amber-400 mb-2" />,
-            text: "进行中",
+            text: "In Progress",
           },
           {
             icon: <CheckCircle className="h-6 w-6 text-green-400 mb-2" />,
-            text: "已完成",
+            text: "Completed",
           },
         ].map((item, index) => (
           <motion.div

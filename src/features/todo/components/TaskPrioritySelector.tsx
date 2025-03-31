@@ -1,38 +1,5 @@
 import { Flag } from "lucide-react";
-
-export type Priority = "low" | "medium" | "high";
-
-interface PriorityOption {
-  value: Priority;
-  label: string;
-  color: string;
-  bgColor: string;
-  hoverColor: string;
-}
-
-const priorityOptions: PriorityOption[] = [
-  {
-    value: "low",
-    label: "低",
-    color: "text-blue-500",
-    bgColor: "bg-blue-50",
-    hoverColor: "hover:bg-blue-100",
-  },
-  {
-    value: "medium",
-    label: "中",
-    color: "text-yellow-500",
-    bgColor: "bg-yellow-50",
-    hoverColor: "hover:bg-yellow-100",
-  },
-  {
-    value: "high",
-    label: "高",
-    color: "text-red-500",
-    bgColor: "bg-red-50",
-    hoverColor: "hover:bg-red-100",
-  },
-];
+import { Priority, priorityOptions } from "../utils/priorityUtils";
 
 interface TaskPrioritySelectorProps {
   value: Priority;
